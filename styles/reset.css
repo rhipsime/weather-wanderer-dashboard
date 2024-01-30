@@ -102,7 +102,7 @@ body {
 }
 
 #forecast h2.text-white {
-  color: rgb(0, 0, 0); /* Font color for the forecast header */
+  color: rgb(255, 255, 255); /* Font color for the forecast header */
   margin-bottom: 10px; /* Adjust margin below the forecast header */
 }
 
