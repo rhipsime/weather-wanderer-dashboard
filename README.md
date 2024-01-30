@@ -29,6 +29,8 @@ The application is responsive, ensuring a consistent user experience across diff
  [Live Demo] (https://rhipsime.github.io/weather-wanderer-dashboard/)
 
 # Screenshots
+ ![Screenshot 1](assets/ss1.png)
+ ![Screenshot 2](assets/ss2.png)
 
 # License
 This project is licensed under the MIT License - see the LICENSE file for details.
