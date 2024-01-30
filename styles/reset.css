@@ -69,6 +69,12 @@ body {
   color: white; /* White text */
 }
 
+#forecast {
+  text-align: center;
+  color: white;
+  margin-bottom: 10px; /* Adjust margin below the forecast header */
+}
+
 /* Forecast Cards Container */
 #forecast-cards-container {
   display: flex;
@@ -101,10 +107,6 @@ body {
   color: white;
 }
 
-#forecast h2.text-white {
-  color: rgb(255, 255, 255); /* Font color for the forecast header */
-  margin-bottom: 10px; /* Adjust margin below the forecast header */
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
