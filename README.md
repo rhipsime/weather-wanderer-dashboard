@@ -1,5 +1,5 @@
 # weather-wanderer-dashboard
- This web application allows users to explore real-time weather information for multiple cities. Users can view the current weather conditions and a 5-day forecast for the cities listed in the predefined array. 
+ This web application allows users to explore real-time weather information for multiple cities. Users can view the current weather conditions and a 5-day forecast for the cities listed in the predefined array. These include ["London", "Barcelona", "Asmara", "Miami", "Tokyo", "Sofia"];
 
 # Features
 
