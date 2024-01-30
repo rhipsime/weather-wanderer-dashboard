@@ -31,7 +31,7 @@ function updateSearchHistory() {
 // Function to iterate through cities and fetch weather data
 async function searchForCities() {
   for (const city of citiesToSearch) {
-    await getCoordinates(city);
+
   }
 }
 
@@ -77,6 +77,7 @@ function displayCurrentWeather(data) {
   const temperature = data.list[0].main.temp;
   const humidity = data.list[0].main.humidity;
   const windSpeed = data.list[0].wind.speed;
+  const iconCode = data.list[0].weather[0].icon;
 
   const todaySection = document.getElementById("today");
   todaySection.innerHTML = `
@@ -86,9 +87,11 @@ function displayCurrentWeather(data) {
       <p>Temperature: ${temperature} K</p>
       <p>Humidity: ${humidity}%</p>
       <p>Wind Speed: ${windSpeed} m/s</p>
+      <img src="https://openweathermap.org/img/wn/${iconCode}.png" alt="Weather Icon">
     </div>
   `;
 }
+
 
 function display5DayForecast(data) {
   const forecastSection = document.getElementById("forecast");
@@ -99,16 +102,19 @@ function display5DayForecast(data) {
     const date = data.list[i].dt_txt;
     const temperature = data.list[i].main.temp;
     const humidity = data.list[i].main.humidity;
+    const iconCode = data.list[i].weather[0].icon;
 
     forecastSection.innerHTML += `
       <div class="card">
         <p>Date: ${date}</p>
         <p>Temperature: ${temperature} K</p>
         <p>Humidity: ${humidity}%</p>
+        <img src="https://openweathermap.org/img/wn/${iconCode}.png" alt="Weather Icon">
       </div>
     `;
   }
 }
+
 
 
 function saveToLocalStorage(city) {
