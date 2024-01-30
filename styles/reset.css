@@ -69,11 +69,12 @@ body {
   color: white; /* White text */
 }
 
-#forecast {
-  text-align: center;
+.forecast-header {
   color: white;
+  text-align: center;
   margin-bottom: 10px; /* Adjust margin below the forecast header */
 }
+
 
 /* Forecast Cards Container */
 #forecast-cards-container {
