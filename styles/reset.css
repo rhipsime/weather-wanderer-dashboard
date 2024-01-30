@@ -55,7 +55,7 @@ body {
 
 
 /* Right Side */
-.right-side {
+.col-lg-9{
   flex-grow: 1;
 }
 
