@@ -14,8 +14,19 @@ searchForm.addEventListener("submit", function (event) {
   if (city !== "") {
     // Call a function to get coordinates from the city (using OpenWeatherMap API)
     getCoordinates(city);
+    // Save the city to search history
+    saveToLocalStorage(city);
+    // Update the display of search history
+    updateSearchHistory();
   }
 });
+
+function updateSearchHistory() {
+  const historyDiv = document.getElementById("history");
+  const history = JSON.parse(localStorage.getItem("searchHistory")) || [];
+  historyDiv.innerHTML = history.map((city) => `<div>${city}</div>`).join("");
+}
+
 
 // Function to iterate through cities and fetch weather data
 async function searchForCities() {
@@ -61,25 +72,44 @@ async function getWeatherData(coordinates) {
 }
 
 function displayCurrentWeather(data) {
-  // Extract necessary data from 'data' object
   const cityName = data.city.name;
-  const date = data.list[0].dt_txt; // Use the date from the first item in the list
-  // Extract other weather data as needed
+  const date = data.list[0].dt_txt;
+  const temperature = data.list[0].main.temp;
+  const humidity = data.list[0].main.humidity;
+  const windSpeed = data.list[0].wind.speed;
 
-  // Update HTML elements with the extracted data
   const todaySection = document.getElementById("today");
-  todaySection.innerHTML += `
+  todaySection.innerHTML = `
     <div class="card">
       <h2>${cityName}</h2>
       <p>Date: ${date}</p>
-      <!-- Add other weather information here -->
+      <p>Temperature: ${temperature} K</p>
+      <p>Humidity: ${humidity}%</p>
+      <p>Wind Speed: ${windSpeed} m/s</p>
     </div>
   `;
 }
 
 function display5DayForecast(data) {
-  // Extract and display 5-day forecast data
+  const forecastSection = document.getElementById("forecast");
+  forecastSection.innerHTML = ""; // Clear previous content
+
+  // Iterate over the 5-day forecast data
+  for (let i = 0; i < data.list.length; i += 8) {
+    const date = data.list[i].dt_txt;
+    const temperature = data.list[i].main.temp;
+    const humidity = data.list[i].main.humidity;
+
+    forecastSection.innerHTML += `
+      <div class="card">
+        <p>Date: ${date}</p>
+        <p>Temperature: ${temperature} K</p>
+        <p>Humidity: ${humidity}%</p>
+      </div>
+    `;
+  }
 }
+
 
 function saveToLocalStorage(city) {
   let history = JSON.parse(localStorage.getItem("searchHistory")) || [];
