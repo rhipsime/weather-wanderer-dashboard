@@ -26,10 +26,12 @@ body {
   justify-content: space-between;
 }
 
-/* Left Side */
-.left-side {
-  max-width: 300px;
+.left-side,
+.col-lg-9 {
+   max-width: 100%;
 }
+
+
 
 .form {
   max-width: 100%;
@@ -54,10 +56,10 @@ body {
 }
 
 
-/* Right Side */
-.col-lg-9{
+.col-lg-9 {
   flex-grow: 1;
 }
+
 
 /* Search Answer */
 #search-answer {
@@ -89,7 +91,7 @@ body {
   }
 
   .left-side,
-  .right-side {
+  .col-lg-9 {
     max-width: 100%;
   }
 }
