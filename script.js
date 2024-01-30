@@ -31,9 +31,10 @@ function updateSearchHistory() {
 // Function to iterate through cities and fetch weather data
 async function searchForCities() {
   for (const city of citiesToSearch) {
-
+    await getCoordinates(city);
   }
 }
+
 
 // Call the function to search for predefined cities on page load
 searchForCities();
@@ -71,6 +72,7 @@ async function getWeatherData(coordinates) {
   }
 }
 
+
 function displayCurrentWeather(data) {
   const cityName = data.city.name;
   const date = data.list[0].dt_txt;
@@ -81,7 +83,7 @@ function displayCurrentWeather(data) {
 
   const todaySection = document.getElementById("today");
   todaySection.innerHTML = `
-    <div class="card">
+    <div class="card" id="search-answer">
       <h2>${cityName}</h2>
       <p>Date: ${date}</p>
       <p>Temperature: ${temperature} K</p>
@@ -91,6 +93,7 @@ function displayCurrentWeather(data) {
     </div>
   `;
 }
+
 
 
 function display5DayForecast(data) {
