@@ -1,4 +1,7 @@
 // script.js
+
+const dayjs = window.dayjs;
+
 // Other JavaScript logic goes here
 
 const searchForm = document.getElementById("search-form");
@@ -80,6 +83,8 @@ function displayCurrentWeather(data) {
   const humidity = data.list[0].main.humidity;
   const windSpeed = data.list[0].wind.speed;
   const iconCode = data.list[0].weather[0].icon;
+  const formattedDate = dayjs(date).format("MMMM D, YYYY");
+
 
   const todaySection = document.getElementById("today");
   todaySection.innerHTML = `
@@ -106,6 +111,8 @@ function display5DayForecast(data) {
     const temperature = data.list[i].main.temp;
     const humidity = data.list[i].main.humidity;
     const iconCode = data.list[i].weather[0].icon;
+    const formattedDate = dayjs(date).format("MMMM D, YYYY");
+
 
     forecastSection.innerHTML += `
       <div class="card">

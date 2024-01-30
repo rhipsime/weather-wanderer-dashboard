@@ -1,16 +1,17 @@
-/* Body */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #001f3f; /* Dark blue background */
-  color: white;
-  margin: 0;
-}
-
 /* Header */
 .weather-header {
   background-color: #001f3f; /* Dark blue background */
   text-align: center;
   padding: 10px;
+  color: white; /* Font color for the header */
+}
+
+/* Body */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: white; /* White background */
+  color: #001f3f; /* Dark blue text */
+  margin: 0;
 }
 
 .weather-header h1 {
@@ -43,14 +44,15 @@ body {
 .list-group div {
   cursor: pointer;
   padding: 10px;
-  background-color: #dcdcdc; /* Light grey background */
-  color: #000; /* Black text */
+  background-color: #001f3f; /* Dark blue background */
+  color: white; /* White text */
   margin-bottom: 5px;
 }
 
 .list-group div:hover {
-  background-color: #c0c0c0; /* Slightly darker grey on hover */
+  background-color: #003366; /* Slightly darker blue on hover */
 }
+
 
 /* Right Side */
 .right-side {
@@ -68,9 +70,13 @@ body {
 .card {
   margin: 10px;
   padding: 10px;
-  background-color: #001f3f; /* Dark navy/phthalo green background */
+  background-color: #001f3f; /* Dark blue background */
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  color: white; /* Font color for card content */
+  border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+  text-align: center;
 }
+
 
 .card h2 {
   color: white;
