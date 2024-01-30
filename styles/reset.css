@@ -75,16 +75,9 @@ body {
   justify-content: space-around;
 }
 
-/* Forecast Cards Container */
-#forecast-cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
 /* Forecast Cards */
 .card {
-  flex: 0 0 calc(12.5% - 20px); /* Adjust the width of each card */
+  flex: 0 0 calc(33.3333% - 20px); /* Adjust the width of each card */
   margin: 10px;
   padding: 10px;
   background-color: #001f3f;
@@ -93,6 +86,10 @@ body {
   border-radius: 5px;
   text-align: center;
 }
+
+.card p {
+  margin: 0; }
+
 
 .card p {
   margin: 0;
