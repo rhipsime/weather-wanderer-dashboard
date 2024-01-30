@@ -17,7 +17,7 @@ searchForm.addEventListener("submit", function (event) {
   }
 });
 async function getCoordinates(city) {
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${a461fc00b3322cacab6cb4a0be3c56eb}`;
   
     try {
       const response = await fetch(apiUrl);
@@ -34,7 +34,7 @@ async function getCoordinates(city) {
     }
   }
   async function getWeatherData(coordinates) {
-    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}`;
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${a461fc00b3322cacab6cb4a0be3c56eb}`;
   
     try {
       const response = await fetch(forecastUrl);
