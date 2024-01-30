@@ -1,31 +1,33 @@
 /* Body */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
+  background-color: #001f3f; /* Dark blue background */
+  color: white;
   margin: 0;
 }
 
 /* Header */
 .weather-header {
-  background-color: #343a40;
+  background-color: #001f3f; /* Dark blue background */
+  text-align: center;
+  padding: 10px;
 }
 
 .weather-header h1 {
   margin: 0;
-  color: white;
 }
 
 /* Container */
 .container-fluid {
   margin: 0 auto;
   padding: 0 10px;
-  display: flex; /* Use flexbox to create a two-column layout */
-  justify-content: space-between; /* Space evenly between the two columns */
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Left Side */
 .left-side {
-  max-width: 300px; /* Adjust the width of the left side as needed */
+  max-width: 300px;
 }
 
 .form {
@@ -40,36 +42,48 @@ body {
 
 .list-group div {
   cursor: pointer;
-  padding: 5px;
-  background-color: #e9ecef;
+  padding: 10px;
+  background-color: #dcdcdc; /* Light grey background */
+  color: #000; /* Black text */
   margin-bottom: 5px;
 }
 
 .list-group div:hover {
-  background-color: #ced4da;
+  background-color: #c0c0c0; /* Slightly darker grey on hover */
 }
 
 /* Right Side */
 .right-side {
-  flex-grow: 1; /* Allow the right side to grow and take up remaining space */
+  flex-grow: 1;
 }
 
-/* Weather Cards */
+/* Search Answer */
+#search-answer {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #001f3f; /* Dark blue background */
+}
+
+/* Forecast Cards */
 .card {
   margin: 10px;
   padding: 10px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #001f3f; /* Dark navy/phthalo green background */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.card h2 {
+  color: white;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .container-fluid {
-    flex-direction: column; /* Stack columns on smaller screens */
+    flex-direction: column;
   }
 
   .left-side,
   .right-side {
-    max-width: 100%; /* Full width on smaller screens */
+    max-width: 100%;
   }
 }
