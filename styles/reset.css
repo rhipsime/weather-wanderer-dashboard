@@ -101,6 +101,11 @@ body {
   color: white;
 }
 
+#forecast h2 {
+  color: white; /* Font color for the forecast header */
+  margin-bottom: 10px; /* Adjust margin below the forecast header */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .container-fluid {
