@@ -68,15 +68,27 @@ body {
   background-color: #001f3f; /* Dark blue background */
 }
 
+/* Forecast Cards Container */
+#forecast-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 /* Forecast Cards */
 .card {
+  flex: 0 0 calc(33.3333% - 20px); /* Adjust the width of each card */
   margin: 10px;
   padding: 10px;
-  background-color: #001f3f; /* Dark blue background */
+  background-color: #001f3f;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-  color: white; /* Font color for card content */
-  border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+  color: white;
+  border-radius: 5px;
   text-align: center;
+}
+
+.card p {
+  margin: 0; /* Remove default margin for better spacing */
 }
 
 
